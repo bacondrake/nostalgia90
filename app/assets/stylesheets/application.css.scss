@@ -1,0 +1,47 @@
+@import "sandstone";
+@import "pagedown_bootstrap";
+
+/*==============================*/
+
+.article {
+  margin-bottom: 80px;
+
+  h1 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ecf0f1;
+  }
+}
+
+// A bit of padding for the nav so the text isn't
+// shoved all the way to the top corner.
+.nav {
+   margin-top: 20px;
+   text-indent: 20px;
+}
+
+// Nav sidebar goes all the way down the page.
+.nav-length {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+}
+
+// Makes fields for emails, passwords, etc 400px wide.
+// Also used in some cases for submit buttons
+.long-field {
+  width: 400px;
+}
+
+// As above, but with text-area
+.long-area {
+  width: 400px;
+  height: 100px;
+}
+
+// Table rows of exams with > 5 marshals will be eye-catchingly red.
+.error {
+	background-color: #e74c3c !important;
+	a {
+		color: #fff;
+	}
+}

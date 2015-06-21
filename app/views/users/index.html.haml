@@ -1,0 +1,14 @@
+.row
+  / .col-md-offset-0.col-sm-offset-0.col-xs-offset-1
+  %h1 Writers
+  %table.table.table-striped
+    %tr
+      %td Name
+      %td Email
+      %td Phone
+    - @users.each do |user|
+      %tr
+        %td= user.name
+        %td
+          %a{:href => "mailto:#{user.email}"}= user.email
+        %td= user.phone
