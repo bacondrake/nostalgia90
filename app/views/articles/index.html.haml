@@ -9,7 +9,7 @@
     %small= article.date
     %p Author: #{article.author}
     %p= markdown(article.contents).html_safe\
-    - if current_user && article.author
+    - if current_user && (article.author == current_user.name)
       = link_to 'edit', edit_article_path(article), class: 'btn btn-primary'
       = link_to 'delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
 %br/
