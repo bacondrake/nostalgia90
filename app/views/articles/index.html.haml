@@ -1,5 +1,8 @@
 %h1
-  Articles #{link_to 'New article', new_article_path, class: "btn btn-primary"}
+  -if current_user
+    Articles #{link_to 'New article', new_article_path, class: "btn btn-primary"}
+  -else
+    Articles
 - @articles.each do |article|
   .article
     %h1= article.title
