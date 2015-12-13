@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.date = Time.new.strftime("%d %b %Y")
+    @article.author = current_user.name
     if @article.save
       redirect_to articles_path, notice: "New blog post successfully created"
     else
@@ -42,7 +43,8 @@ class ArticlesController < ApplicationController
       params.require(:article).permit(
         :date,
         :title,
-        :contents
+        :contents,
+        :author
       )
     end
 

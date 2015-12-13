@@ -4,8 +4,10 @@
   .article
     %h1= article.title
     %small= article.date
-    %p= markdown(article.contents).html_safe
-    = link_to 'edit', edit_article_path(article), class: 'btn btn-primary'
-    = link_to 'delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+    %p Author: #{article.author}
+    %p= markdown(article.contents).html_safe\
+    - if current_user && article.author
+      = link_to 'edit', edit_article_path(article), class: 'btn btn-primary'
+      = link_to 'delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
 %br/
 = will_paginate @articles, renderer: BootstrapPagination::Rails
