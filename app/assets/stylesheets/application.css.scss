@@ -10,20 +10,43 @@
     padding-bottom: 15px;
     border-bottom: 1px solid #ecf0f1;
   }
+
+  img {
+    max-width: 200px;
+    display: inline-block;
+  }
+}
+
+.btn {
+  padding: 0.75em 1.25em;
+  margin-bottom: 0;
 }
 
 // A bit of padding for the nav so the text isn't
 // shoved all the way to the top corner.
 .nav {
-   margin-top: 20px;
    text-indent: 20px;
 }
+
+.navbar {
+  border-radius: 0;
+}
+
+.navbar-default {
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+}
+
 
 // Nav sidebar goes all the way down the page.
 .nav-length {
   height: 100%;
   width: 20%;
   position: fixed;
+}
+
+.row {
+  margin: 0;
 }
 
 // Makes fields for emails, passwords, etc 400px wide.
